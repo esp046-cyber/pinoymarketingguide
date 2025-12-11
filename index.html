@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinoy Marketing Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 1%;
+        }
+        
+        .container {
+            max-width: 100%;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px 1%;
+            color: white;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .tagline {
+            font-size: 11px;
+            opacity: 0.9;
+            margin-top: 3px;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            overflow-x: auto;
+            padding: 0 1%;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .tab {
+            padding: 12px 15px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 13px;
+            color: #6c757d;
+            white-space: nowrap;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab.active {
+            color: #f5576c;
+            border-bottom-color: #f5576c;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 1%;
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.4s;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .card h3 {
+            font-size: 14px;
+            color: #667eea;
+            margin-bottom: 6px;
+        }
+        
+        .card p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #495057;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 12px 0;
+            border-radius: 6px;
+        }
+        
+        .tip-box strong {
+            color: #856404;
+            font-size: 12px;
+        }
+        
+        .tip-box p {
+            font-size: 11px;
+            color: #856404;
+            margin-top: 4px;
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .strategy-item {
+            background: white;
+            border: 2px solid #e9ecef;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .strategy-item:hover {
+            border-color: #f5576c;
+            transform: scale(1.02);
+        }
+        
+        .strategy-item h4 {
+            font-size: 13px;
+            color: #f5576c;
+            margin-bottom: 5px;
+        }
+        
+        .strategy-item p {
+            font-size: 11px;
+            color: #6c757d;
+            line-height: 1.4;
+        }
+        
+        .emoji {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 12px 1%;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Pinoy Marketing Guide</h1>
+            <p class="tagline">Your Complete Filipino Business Marketing Toolkit</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('basics')">Basics</button>
+            <button class="tab" onclick="showSection('social')">Social Media</button>
+            <button class="tab" onclick="showSection('strategies')">Strategies</button>
+            <button class="tab" onclick="showSection('tips')">Pro Tips</button>
+            <button class="tab" onclick="showSection('content')">Content</button>
+            <button class="tab" onclick="showSection('pricing')">Pricing</button>
+            <button class="tab" onclick="showSection('branding')">Branding</button>
+            <button class="tab" onclick="showSection('growth')">Growth</button>
+            <button class="tab" onclick="showSection('customer')">Customer Service</button>
+            <button class="tab" onclick="showSection('analytics')">Analytics</button>
+            <button class="tab" onclick="showSection('ecommerce')">E-Commerce</button>
+            <button class="tab" onclick="showSection('local')">Local Marketing</button>
+            <button class="tab" onclick="showSection('ads')">Advertising</button>
+            <button class="tab" onclick="showSection('email')">Email/SMS</button>
+            <button class="tab" onclick="showSection('video')">Video Marketing</button>
+            <button class="tab" onclick="showSection('startup')">Startup Guide</button>
+            <button class="tab" onclick="showSection('trendy')">Trends 2024</button>
+            <button class="tab" onclick="showSection('crisis')">Crisis Mgmt</button>
+            <button class="tab" onclick="showSection('automation')">Automation</button>
+            <button class="tab" onclick="showSection('mindset')">Business Mindset</button>
+            <button class="tab" onclick="showSection('legal')">Legal & Tax</button>
+            <button class="tab" onclick="showSection('finance')">Finance Tips</button>
+            <button class="tab" onclick="showSection('scaling')">Scaling Up</button>
+            <button class="tab" onclick="showSection('seasonal')">Seasonal Promos</button>
+            <button class="tab" onclick="showSection('niches')">Top Niches</button>
+            <button class="tab" onclick="showSection('packaging')">Packaging Guide</button>
+            <button class="tab" onclick="showSection('photography')">Product Photos</button>
+            <button class="tab" onclick="showSection('copywriting')">Copywriting</button>
+            <button class="tab" onclick="showSection('logistics')">Logistics</button>
+            <button class="tab" onclick="showSection('competition')">Competition</button>
+            <button class="tab" onclick="showSection('partnerships')">Partnerships</button>
+            <button class="tab" onclick="showSection('productivity')">Productivity</button>
+        </div>
+        
+        <div class="content">
+            <div id="basics" class="section active">
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Target Market</h3>
+                    <p>Ang pinakamahalagang tanong: Sino ang iyong customer? Alamin ang edad, lokasyon, income level, at pangangailangan nila. Sa Pilipinas, maraming market segments: masa market, middle class, at premium market.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Customer Persona</h3>
+                    <p>Gumawa ng detailed profile: Si "Maria, 28, working mom, ₱30k income, mahilig mag-online shopping, active sa Facebook". Mas specific, mas targeted ang marketing mo.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💡</span>Value Proposition</h3>
+                    <p>Bakit dapat bumili ang customer sa iyo? Ano ang unique mo? Maaaring mas mura, mas mataas ang quality, mas mabilis ang delivery, o mas maganda ang service. Malinaw na i-communicate ito.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎪</span>USP (Unique Selling Point)</h3>
+                    <p>Ano ang ONE THING na wala sa competition? Example: "Same day delivery sa Metro Manila" o "100% organic ingredients from Benguet". Make it memorable!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Market Research</h3>
+                    <p>Mag-research ng competition. Tingnan ang presyo, produkto, at marketing nila. Alamin kung ano ang gusto at hindi gusto ng customers. Use surveys, interviews, o simpleng observation.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📍</span>Location Strategy</h3>
+                    <p>Iba-iba ang pangangailangan per region: NCR = convenience, Visayas = value for money, Mindanao = personal connection. Adjust messaging based sa area.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💰 Budget Tip:</strong>
+                    <p>Hindi kailangan ng malaking budget para magsimula! Focus sa organic marketing muna - word of mouth, social media posts, at community engagement.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📋</span>Business Plan Basics</h3>
+                    <p>Write down: Product/service, target market, competitors, pricing, marketing plan, startup costs, projected income. Hindi formal document - simple notes lang to guide you.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💵</span>Startup Budget</h3>
+                    <p>Minimum: ₱5k-20k (supplies, packaging, initial ads). Medium: ₱50k-100k (bulk inventory, better equipment). Premium: ₱200k+ (physical store, staff). Start small!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚖️</span>Legal Requirements</h3>
+                    <p>DTI registration: ₱500 (sole proprietor), Barangay clearance: ₱100-500, Mayor's permit: varies, BIR registration: free but need to file taxes. Start with DTI first!</p>
+                </div>
+            </div>
+            
+            <div id="social" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📘</span>Facebook Marketing</h3>
+                    <p>Ang #1 platform sa Pilipinas! Gumawa ng business page, regular posting (3-5x per week), engage sa comments, gumamit ng Facebook Groups, at mag-run ng affordable ads starting at ₱100/day.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Facebook Ads Strategy</h3>
+                    <p>Start small: ₱50-100/day. Target by location, age, interests. Use "Engagement" objective first para mura. Retarget mga nag-engage. Best format: Carousel ads for products, Video ads for storytelling.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Facebook Groups</h3>
+                    <p>Join buy-and-sell groups sa area mo. Mag-post ng soft sell (hindi puro ads). Help others, answer questions, build trust. Own group? Create exclusive deals for members.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📸</span>Instagram Strategy</h3>
+                    <p>Perfect para sa visual products! Use high-quality photos, Stories para sa behind-the-scenes, Reels para sa viral content, at hashtags (#PinoyBusiness #SupportLocal).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Instagram Growth Hacks</h3>
+                    <p>Post Reels daily (algorithm favorite!), use 20-30 relevant hashtags, collaborate with other local brands, reply to ALL comments within 1 hour, run contests/giveaways monthly.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎵</span>TikTok Presence</h3>
+                    <p>Fastest growing platform! Create entertaining short videos, join trending challenges, show product demos, at humanize your brand. Sobrang bilis mag-viral dito!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎬</span>TikTok Content Ideas</h3>
+                    <p>Unboxing videos, day in the life, how it's made, customer reactions, funny skits related sa product, duets with customers, before/after transformations.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Messenger & WhatsApp</h3>
+                    <p>Para sa direct customer service. Quick replies, automated greetings, product catalogs, at mabilis na order processing. Mahalagang responsive ka within 1 hour.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤖</span>Chatbot Setup</h3>
+                    <p>Use ManyChat or Chatfuel (free versions available). Auto-reply sa common questions: pricing, delivery time, payment methods, store hours. Save time, impress customers!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⏰ Posting Schedule:</strong>
+                    <p>Best times: 11AM-1PM (lunch break) at 7PM-9PM (after work). Weekends din maganda! Use scheduling tools para consistent.</p>
+                </div>
+            </div>
+            
+            <div id="strategies" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Marketing Funnel</h3>
+                    <p>Awareness (palakasin reach) ➡️ Interest (engage content) ➡️ Desire (show benefits) ➡️ Action (easy checkout). Each stage needs different strategy at content type.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔥</span>Seasonal Marketing</h3>
+                    <p>Christmas (Sept-Dec), Valentine's (Jan-Feb), Summer (March-May), Back-to-school (June), Payday (15th & 30th), 13th month (Nov-Dec). Plan promos 1 month ahead!</p>
+                </div>
+                
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>🎁 Promo Campaigns</h4>
+                        <p>Flash sales, buy 1 take 1, discounts sa payday (15th & 30th), free shipping, loyalty rewards, referral bonuses</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🤝 Influencer Collabs</h4>
+                        <p>Partner with micro-influencers (5k-50k followers), barter deals, product reviews, unboxing videos, giveaways</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>📦 Packaging</h4>
+                        <p>Aesthetic packaging = free marketing! Instagrammable, may branding, personalized notes, eco-friendly options</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>⭐ Customer Reviews</h4>
+                        <p>Encourage testimonials, screenshot positive feedback, create case studies, feature customer photos</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🎪 Events & Bazaars</h4>
+                        <p>Join local bazaars, pop-up stores, community events, tiangge, trade fairs - physical presence matters!</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>📧 Email Marketing</h4>
+                        <p>Build email list, send newsletters, exclusive deals, new product announcements, birthday greetings</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🎮 Gamification</h4>
+                        <p>Spin the wheel promos, scratch cards, mystery boxes, collect stamps for freebies, point systems</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🌟 User Generated Content</h4>
+                        <p>Ask customers to post photos with product, create branded hashtag, repost customer content, run photo contests</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🎯 Affiliate Marketing</h4>
+                        <p>Recruit brand ambassadors, give commission per sale, provide unique codes, track performance, reward top affiliates</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🔄 Retargeting Ads</h4>
+                        <p>Target website visitors, video viewers, page engagers. They already know you = higher conversion rate!</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🎓 Educational Marketing</h4>
+                        <p>Free workshops, how-to guides, tutorials, tips series. Build authority, provide value first, sales follow naturally!</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h4>🏆 Contests & Challenges</h4>
+                        <p>Photo contests, creative challenges, trivia games, caption contests. Engagement booster, reach expander, fun for community!</p>
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Pro Strategy:</strong>
+                    <p>Combine multiple tactics! Example: Influencer collab + Flash sale + Limited edition packaging = Maximum impact. Test different combinations monthly.</p>
+                </div>
+            </div>
+            
+            <div id="tips" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🇵🇭</span>Filipino Values</h3>
+                    <p>Use "po" at "opo" sa customer service. Mag-celebrate ng holidays (Christmas, New Year, Fiestas). Emphasize family, community, at "bayanihan" spirit sa messaging.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎊</span>Holiday Marketing</h3>
+                    <p>Christmas: Start Sept, highlight gift ideas, offer gift wrapping. New Year: Fresh start theme, resolution-related. Valentine's: Couple deals. Mother's/Father's Day: Family bundles.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Language Mix</h3>
+                    <p>Taglish works best! Mix ng Filipino at English. Mas relatable, mas naiintindihan. Use colloquial terms na gamit ng target market mo.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🗨️</span>Power Words for Filipinos</h3>
+                    <p>"Sulit", "Mura", "Quality", "Pwede installment", "Free shipping", "Limited", "Sale", "Last na", "Mabilis", "Legit", "Proven", "Tested". Use these strategically!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎨</span>Visual Content</h3>
+                    <p>Filipinos love colorful, eye-catching content! Use bright colors, emojis, memes, at relatable scenarios. Video content performs 3x better than photos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Mobile-First Approach</h3>
+                    <p>99% of Filipinos access internet via mobile. Optimize EVERYTHING for mobile: fast loading, easy navigation, mobile-friendly checkout, vertical videos for Stories/Reels.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚚</span>Delivery Options</h3>
+                    <p>Offer multiple payment methods: COD, GCash, bank transfer, credit card. Partner with J&T, LBC, Lalamove. Free shipping threshold strategy works!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Target Pain Points</h3>
+                    <p>Filipinos want: Affordable pero quality, fast delivery, responsive seller, proven results, easy returns, flexible payment. Address these sa marketing messages!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚡</span>Quick Wins</h3>
+                    <p>Create a Facebook Business Page today, post your first product photo, join 5 relevant FB groups, message 10 potential customers, ask for reviews from happy customers!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎓</span>Common Mistakes</h3>
+                    <p>No reply sa messages, inconsistent posting, walang clear CTA, overpromise/underdeliver, poor packaging, no customer service, hindi nag-adapt sa feedback.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🎯 Action Plan:</strong>
+                    <p>Week 1: Setup social media. Week 2: Create content calendar. Week 3: Run first promo. Week 4: Analyze results and adjust. Consistency is key!</p>
+                </div>
+            </div>
+            
+            <div id="content" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📝</span>Content Calendar</h3>
+                    <p>Plan 1 month ahead. Monday: Motivational post, Tuesday: Product feature, Wednesday: Customer testimonial, Thursday: Behind-the-scenes, Friday: Promo/Sale, Weekend: Lifestyle/User-generated content.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📷</span>Photo Tips</h3>
+                    <p>Natural lighting is best! Use white background para professional. Multiple angles ng product. Include size reference. Lifestyle shots (product in use). Edit using Canva, Lightroom, o CapCut.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎥</span>Video Content Formula</h3>
+                    <p>First 3 seconds: Hook (attention grabber). Middle: Value/Entertainment. End: Clear CTA (call-to-action). Keep it 15-60 seconds. Add trending music. Use captions (many watch without sound!).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✍️</span>Copywriting Formula</h3>
+                    <p>AIDA Method - Attention (catchy headline), Interest (benefit statement), Desire (create want), Action (clear CTA). Example: "Pawis problems? ➡️ Stay fresh all day! ➡️ Get 50% off now! ➡️ Shop here!"</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Engaging Captions</h3>
+                    <p>Ask questions, use emojis, tell stories, share tips, create urgency, add humor. End with CTA: "Double tap if agree", "Tag someone who needs this", "Link in bio".</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎨</span>Design Tools</h3>
+                    <p>Canva (templates, easy to use), CapCut (video editing), RemoveBG (background remover), Picsart (photo editing), Unfold (Instagram Stories). Most have FREE versions!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🔥 Content Ideas:</strong>
+                    <p>Product unboxing, customer reviews, how-to tutorials, FAQ videos, day in the life, packaging process, team introductions, flash sale announcements, giveaway mechanics.</p>
+                </div>
+            </div>
+            
+            <div id="pricing" class="section">
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Pricing Strategy Basics</h3>
+                    <p>Formula: Cost + Profit Margin = Price. Typical margins: 30-50% for retail, 100-300% for unique products. Factor in: materials, labor, overhead, shipping, platform fees.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Competitive Pricing</h3>
+                    <p>Research 5-10 competitors. Price slightly lower (penetration), same (competitive), or higher (premium positioning). Justify higher prices with better quality/service.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏷️</span>Psychological Pricing</h3>
+                    <p>₱299 vs ₱300 (charm pricing), Bundle deals (₱500 for 3 instead of ₱600), Tiered pricing (Good/Better/Best), Anchor pricing (show original price crossed out).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Promo Pricing Tactics</h3>
+                    <p>Payday sale (13th-15th, 28th-30th), Flash sale (2-4 hours), BOGO (Buy One Get One), Freebies with purchase, Loyalty discounts (5% for repeat customers), Bulk discounts.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Shipping Strategies</h3>
+                    <p>Free shipping on minimum order (₱500+), Flat rate (₱50 anywhere), Location-based (NCR ₱50, Provincial ₱100), Buyer shoulders (para sa budget products), Express option available.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💳</span>Payment Terms</h3>
+                    <p>COD (cash on delivery) - most preferred, GCash/PayMaya (instant), Bank transfer (for big orders), Installment (Billease, Atome), Credit card (Shopee/Lazada).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Dynamic Pricing Techniques</h3>
+                    <p>Peak pricing (holidays), Early bird discounts, Last-minute deals, Member exclusive prices, Volume discounts, Time-based pricing. Optimize revenue per season!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Bundle Pricing Strategy</h3>
+                    <p>Product bundles (save 20%), Service packages (3-tier pricing), Mix-and-match deals, Family packs, Starter kits. Increases average order value significantly!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⚠️ Pricing Mistakes to Avoid:</strong>
+                    <p>Too cheap (mukhang fake), no profit margin, walang discount strategy, inconsistent pricing across platforms, hindi kasama shipping sa computation.</p>
+                </div>
+            </div>
+            
+            <div id="branding" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🎨</span>Brand Identity</h3>
+                    <p>Your brand = personality ng business. Define: Mission (why you exist), Vision (where you're going), Values (what you believe). Make it authentic and relatable to Filipinos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌈</span>Color Psychology</h3>
+                    <p>Red = excitement/appetite, Blue = trust/professional, Green = health/eco-friendly, Yellow = happiness/energy, Pink = feminine/sweet, Black = luxury/premium. Choose 2-3 brand colors.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✏️</span>Logo & Name</h3>
+                    <p>Simple, memorable, meaningful. Can be Tagalog, English, or Taglish. Easy to pronounce and spell. Check if available sa Facebook/Instagram. Logo dapat clear kahit maliit.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🗣️</span>Brand Voice</h3>
+                    <p>Paano ka makikipag-usap sa customers? Formal or casual? Puro English or Taglish? Friendly? Professional? Witty? Maintain consistency across all platforms!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Packaging as Branding</h3>
+                    <p>Unboxing experience matters! Use branded packaging, thank you cards, stickers, freebies. Instagrammable packaging = free marketing. Even simple kraft paper with nice sticker works!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⭐</span>Brand Promise</h3>
+                    <p>What guarantee do you give? "Fresh daily", "24hr delivery", "100% organic", "Hassle-free returns". Keep your promise EVERY TIME para mag-build ng trust.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Brand Story</h3>
+                    <p>Bakit mo sinimulan ang business? Personal ba? Family recipe? Passion project? Share your story - Filipinos love authentic, heartfelt stories. Make them feel connected.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Branding Tip:</strong>
+                    <p>Your brand should be recognizable kahit walang logo. Consistent colors, tone, style across all touchpoints. Think: Jollibee (red/yellow, masaya), Bench (edgy, Filipino pride).</p>
+                </div>
+            </div>
+            
+            <div id="growth" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Growth Metrics to Track</h3>
+                    <p>Daily sales, new customers, repeat rate, average order value, conversion rate, social media followers, engagement rate, website visits. Use free tools: Facebook Insights, Google Analytics.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Customer Retention</h3>
+                    <p>Mas mura mag-retain than mag-acquire ng new customers! Follow up after purchase, birthday greetings, loyalty rewards, exclusive deals for regulars, personal messages.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌟</span>Referral Program</h3>
+                    <p>"Refer a friend, get ₱50 off!" Both referrer and referee dapat may benefit. Track using unique codes. Automate if possible. Word-of-mouth is POWERFUL sa Pilipinas!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Partnerships & Collabs</h3>
+                    <p>Partner with complementary businesses (not competitors!). Cross-promote. Joint giveaways. Bundle deals. Example: Coffee shop + Bakery, Clothing + Accessories.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏪</span>Marketplace Strategy</h3>
+                    <p>Shopee, Lazada, Carousell - different audience per platform. Join platform campaigns (Free Shipping Day, Payday Sale, 9.9, 11.11, 12.12). Optimize listings with keywords.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Scaling Up</h3>
+                    <p>When to scale? When you have consistent sales, positive reviews, streamlined process. Options: Hire VA, invest in ads, expand product line, open physical store, franchise model.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💼</span>Business Registration</h3>
+                    <p>Start as sole proprietor (simplest). Register DTI (₱500), Mayor's permit, BIR. Once earning ₱3M+/year, consider LLC. Benefits: legitimacy, business account, bigger partnerships.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎓</span>Continuous Learning</h3>
+                    <p>Join: Facebook groups (Filipino Entrepreneurs), free webinars (DTI, DOST), YouTube channels (Sean Si, Negosyo Tips), podcasts, online courses (Coursera, Udemy promos).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💼</span>Diversification Strategy</h3>
+                    <p>Don't rely on one product, one platform, one supplier. Spread risk! Multiple income streams, backup plans, test new markets. Resilient business = sustainable growth!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌍</span>Global Expansion Potential</h3>
+                    <p>Target OFWs, balikbayans, international Pinoys. Ship via EMS, DHL, FedEx. Adjust for time zones. Accept PayPal, Wise. Tap into global Filipino market!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🚀 30-Day Growth Challenge:</strong>
+                    <p>Week 1: Optimize all profiles. Week 2: Run targeted ad (₱100/day). Week 3: Collab with 2 influencers. Week 4: Launch referral program. Track everything!</p>
+                </div>
+            </div>
+            
+            <div id="customer" class="section">
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Response Time</h3>
+                    <p>Reply within 1 hour! 73% of customers expect immediate response. Use quick replies, auto-responses after hours, set expectations ("Will reply within 24hrs"), hire VA if needed.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">😊</span>Customer Service Scripts</h3>
+                    <p>Greeting: "Hi! Salamat sa message 😊", Product inquiry: "Available po yan! Here's the details:", Order confirmation: "Confirmed! Will ship tomorrow", Follow-up: "Natanggap nyo na po?"</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">❌</span>Handling Complaints</h3>
+                    <p>Listen first, apologize (even if not your fault), offer solution, follow through, ask for feedback. Turn unhappy customer into loyal advocate. "I'm sorry po, let me fix this."</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔄</span>Return & Refund Policy</h3>
+                    <p>Clear policy prevents disputes: "7-day return for defective items", "Original packaging required", "Refund within 3-5 days". Post policy sa profile/website.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⭐</span>Getting 5-Star Reviews</h3>
+                    <p>Timing is key! Ask after successful delivery. Make it easy: "Paki-rate naman po 5 stars kung satisfied 😊". Offer small incentive: "5% discount sa next order for reviews".</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💝</span>Surprise & Delight</h3>
+                    <p>Small gestures = big impact! Handwritten thank you notes, free samples, birthday discounts, upgrade shipping, extra freebies. Creates emotional connection.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Proactive Communication</h3>
+                    <p>Update customers before they ask: Order confirmed, Processing, Shipped, Out for delivery, Delivered. Peace of mind = happy customers = repeat business!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔧</span>Service Recovery Techniques</h3>
+                    <p>When mistakes happen: Apologize sincerely, Fix immediately, Compensate generously, Follow up later, Learn & improve. Turn problems into loyalty opportunities!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📞</span>Multi-Channel Support</h3>
+                    <p>Be available where customers are: Facebook Messenger, Instagram DM, WhatsApp, SMS, Email, Viber. Use tools like ManyChat to manage all in one place.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Loyalty Program Ideas</h3>
+                    <p>Points system (₱100 spent = 1 point), VIP tiers (Bronze/Silver/Gold), exclusive deals, early access to new products, birthday perks, free shipping for loyal customers.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🔑 Customer Service Golden Rule:</strong>
+                    <p>Treat every customer like they're your only customer. Personal touch, fast response, genuine care. Happy customers = repeat business + referrals!</p>
+                </div>
+            </div>
+            
+            <div id="analytics" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Key Metrics to Track</h3>
+                    <p>Daily sales, total revenue, profit margin, number of orders, average order value (AOV), customer acquisition cost (CAC), return on ad spend (ROAS), conversion rate.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Facebook Page Insights</h3>
+                    <p>Track: Page views, post reach, engagement rate, best posting times, top posts, audience demographics. Adjust strategy based on data. What works = do more!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Google Analytics Setup</h3>
+                    <p>Free tool! Track website visitors, traffic sources, user behavior, conversion funnel. See which products viewed most, where customers drop off. Optimize accordingly.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Understanding ROI</h3>
+                    <p>ROI = (Revenue - Cost) / Cost × 100%. Example: Spent ₱1000 on ads, earned ₱5000 = 400% ROI. Aim for minimum 200% ROI. Track per campaign.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔍</span>A/B Testing</h3>
+                    <p>Test everything! Two ad images, two captions, two prices, two CTAs. Run simultaneously, compare results. Winner = permanent. Always be testing!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Social Media Analytics</h3>
+                    <p>Instagram Insights: Best time to post, Stories completion rate, Reels performance. TikTok Analytics: Video views, watch time, traffic sources. Use data to improve!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📋</span>Simple Tracking Sheet</h3>
+                    <p>Use Google Sheets! Columns: Date, Platform, Spent, Sales, Orders, New Customers, Notes. Update daily. Review weekly. Spot trends, identify what works.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Setting Goals</h3>
+                    <p>SMART goals: Specific (increase sales), Measurable (by 30%), Achievable (realistic), Relevant (business growth), Time-bound (in 3 months). Track progress weekly.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Cohort Analysis</h3>
+                    <p>Group customers by acquisition date. Track behavior over time. Which months bring best customers? What's retention rate? Optimize acquisition channels!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Attribution Modeling</h3>
+                    <p>Which touchpoint gets credit for sale? First click, last click, or multi-touch? Understand customer journey. Allocate budget to effective channels!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>📊 Weekly Review Checklist:</strong>
+                    <p>Total sales vs target, best-selling products, ad performance, customer feedback, inventory levels, upcoming campaigns. Adjust strategy based on findings!</p>
+                </div>
+            </div>
+            
+            <div id="ecommerce" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🏪</span>Shopee Optimization</h3>
+                    <p>High-quality photos (white background), detailed descriptions, competitive pricing, join Shopee campaigns, fast response rate, maintain seller score, use Shopee ads.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🛒</span>Lazada Best Practices</h3>
+                    <p>Complete product info, use all photo slots, set competitive shipping rates, participate in Flash Sales, maintain inventory, quick fulfillment, respond to Q&A section.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Product Listing Tips</h3>
+                    <p>Clear title with keywords, multiple angles photos, size chart/dimensions, material/ingredients, usage instructions, what's included, shipping info. Answer all possible questions!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔍</span>SEO for E-Commerce</h3>
+                    <p>Use search terms customers actually type! Example: "white shoes for women size 7" not just "shoes". Include brand, color, size, material in title/description.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⭐</span>Review Management</h3>
+                    <p>Respond to ALL reviews (good and bad), thank customers, address issues publicly, ask for photo reviews, showcase reviews sa social media. Aim for 4.5+ rating.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Marketplace Campaigns</h3>
+                    <p>9.9, 10.10, 11.11, 12.12 - Mega Sales! Prepare stock, create bundles, set discount vouchers, join platform ads, schedule posts, maximize visibility during peak days.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Inventory Management</h3>
+                    <p>Track stock levels daily, reorder before running out, avoid overstock (dead capital), use spreadsheet or apps (Sortly, Stocky), mark bestsellers, seasonal planning.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚚</span>Fulfillment Strategy</h3>
+                    <p>Self-fulfill (more control) or use marketplace logistics. Pack same day, ship next day. Update tracking info. Confirm delivery. Fast shipping = better ratings!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Mobile Commerce Optimization</h3>
+                    <p>Mobile = 90% of Filipino online shoppers! Fast loading, easy navigation, one-thumb usability, simplified checkout, mobile payment options. Test on different devices!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Conversion Rate Optimization</h3>
+                    <p>Test checkout flow, product descriptions, images, CTAs, trust badges, urgency elements. Small improvements = big sales increase. A/B test everything!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Multi-Platform Strategy:</strong>
+                    <p>Don't put all eggs in one basket! Sell on Shopee + Lazada + Facebook + Instagram + own website. Cross-promote. Different platforms, different audiences!</p>
+                </div>
+            </div>
+            
+            <div id="local" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📍</span>Hyperlocal Marketing</h3>
+                    <p>Target specific barangay/city. Use location-based ads, join local Facebook groups, partner with nearby businesses, sponsor community events, geo-tag posts.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Barangay Partnerships</h3>
+                    <p>Connect with barangay officials, sponsor events (liga, fiesta), donate to programs, put up posters (with permission), distribute flyers, word-of-mouth spreads fast!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎪</span>Bazaar & Tiangge</h3>
+                    <p>Weekend markets, school fairs, church bazaars, mall events. Bring samples, eye-catching display, promo prices, collect contact info, distribute business cards.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏫</span>School & Office Partnerships</h3>
+                    <p>Offer bulk discounts to schools/offices, create customized packages, employee purchase programs, sponsor school events, set up display booths during events.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📢</span>Traditional Marketing</h3>
+                    <p>Still works! Tarpaulin sa main roads, radio ads (local stations), flyers sa subdivision, tricycle ads, referral cards, business cards everywhere you go.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚗</span>Delivery Optimization</h3>
+                    <p>Offer same-day delivery in your area, free delivery within radius, meetup locations (LRT/MRT stations, malls), scheduled delivery days per area to save cost.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Community Engagement</h3>
+                    <p>Join homeowners FB groups, sponsor sports teams, participate in charity drives, feature local stories, collaborate with local influencers, be visible in community.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Location-Based Promos</h3>
+                    <p>"Free delivery in Quezon City today!", "20% off for Makati customers", "Special bundle for Cavite residents". Creates urgency + relevance for local audience.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🏘️ Local Marketing Wins:</strong>
+                    <p>Be the go-to brand sa area mo! Consistent presence, excellent service, fair prices, community involvement. Local loyalty = sustainable business!</p>
+                </div>
+            </div>
+            
+            <div id="ads" class="section">
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Facebook Ads Budget</h3>
+                    <p>Start with ₱50-100/day. Test for 3-7 days. If ROI good (2x or more), increase to ₱200-500/day. Scale gradually. Don't spend big without testing first!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Ad Targeting Tips</h3>
+                    <p>Location: Specific city/province. Age: Based on product. Interests: Related hobbies/brands. Behavior: Online shoppers, mobile users. Start broad, then narrow down.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Ad Objectives</h3>
+                    <p>Engagement (cheapest, build awareness), Traffic (to website/shop), Messages (direct inquiries), Conversions (for sales). Start with Engagement then retarget!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🖼️</span>Ad Creative Best Practices</h3>
+                    <p>Eye-catching image, clear product focus, minimal text on image (<20%), strong CTA, mobile-optimized, test multiple versions, use video when possible.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📝</span>Ad Copy Formula</h3>
+                    <p>Hook (attention grabber) + Benefit (what's in it for them) + Social proof (reviews/testimonials) + Urgency (limited time) + CTA (shop now/order here).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔄</span>Retargeting Strategy</h3>
+                    <p>Target people who: Visited your page, engaged with posts, watched videos, added to cart but didn't buy. They already know you = higher conversion rate!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Ad Performance Metrics</h3>
+                    <p>CTR (click-through rate) - aim 1%+, CPC (cost per click) - lower is better, CPM (cost per 1000 impressions), ROAS (return on ad spend) - aim 3x minimum.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⏰</span>Best Times to Run Ads</h3>
+                    <p>Weekdays: 11AM-1PM (lunch), 7PM-10PM (after work). Weekends: 10AM-9PM. Payday period: 13th-17th, 28th-2nd. Test your audience's active hours!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎬</span>Video Ads Power</h3>
+                    <p>Cost less per view, higher engagement, better storytelling. Keep 15-30 seconds, hook in first 3 seconds, add captions, square or vertical format.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💡</span>Boosting vs Ads Manager</h3>
+                    <p>Boosting: Easy, quick, limited options. Ads Manager: More control, better targeting, lower cost, detailed analytics. Learn Ads Manager for better results!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Lookalike Audiences</h3>
+                    <p>Let Facebook find people similar to your best customers. Upload customer list, create lookalike audience. Targets warm prospects = higher conversion!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Ad Split Testing</h3>
+                    <p>Test one variable at a time: Image A vs B, Headline 1 vs 2, Audience X vs Y. Winner gets budget. Continuous testing = continuous improvement!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🚫 Common Ad Mistakes:</strong>
+                    <p>No testing, wrong audience, weak creative, no tracking, giving up too soon, no retargeting, all budget in one ad. Test, analyze, optimize!</p>
+                </div>
+            </div>
+            
+            <div id="email" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📧</span>Building Email List</h3>
+                    <p>Collect emails via: Order forms, pop-up offers, contests, free downloads, website signup. Start simple with Google Forms. Goal: 100 emails first month!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✉️</span>Email Marketing Tools</h3>
+                    <p>Free options: Mailchimp (free up to 500 contacts), Sender (2,500 contacts free), Gmail (manual pero works!). Paid: GetResponse, ConvertKit. Start free!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📨</span>Email Types to Send</h3>
+                    <p>Welcome email (first contact), Newsletter (weekly/monthly updates), Promotional (sales/discounts), Cart abandonment, Re-engagement (inactive customers), Birthday greetings.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Subject Line Tips</h3>
+                    <p>Keep 40 characters or less, use emoji 🎁, create urgency "Last Day!", personalize "Hi Maria", avoid spam words "FREE!!!", A/B test different versions.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>SMS Marketing</h3>
+                    <p>Higher open rate than email (98%!). Use for: Order confirmations, delivery updates, flash sales, appointment reminders. Keep messages short, clear CTA.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>SMS Platforms</h3>
+                    <p>Semaphore, M360, Chikka, Globe Labs, Smart Communications. Costs ₱0.50-1 per SMS. Use for important messages only. Get permission first!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤖</span>Automation Ideas</h3>
+                    <p>Auto-send: Welcome series (3 emails), Birthday discount, Win-back campaign (60 days no purchase), Product recommendations, Post-purchase follow-up.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Email Metrics</h3>
+                    <p>Open rate (aim 20%+), Click rate (aim 3%+), Unsubscribe rate (keep below 0.5%), Conversion rate. Test send times, subjects, content to improve.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>✅ Email Marketing Checklist:</strong>
+                    <p>Permission-based list, mobile-friendly design, clear CTA, unsubscribe option, valuable content (not just sales!), consistent schedule (weekly or bi-weekly).</p>
+                </div>
+            </div>
+            
+            <div id="video" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🎥</span>Why Video Marketing</h3>
+                    <p>Videos get 1200% more shares than text+images combined! Higher engagement, better storytelling, builds trust faster. Filipinos LOVE video content!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Video Types That Work</h3>
+                    <p>Product demos, unboxing, tutorials/how-to, customer testimonials, behind-the-scenes, day in the life, Q&A, live selling, transformation (before/after).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎬</span>Equipment Needed</h3>
+                    <p>Smartphone lang (latest phone cameras are great!), tripod (₱200-500), ring light (₱300-1000), lapel mic (₱500), natural lighting. No need for expensive gear!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✂️</span>Editing Apps</h3>
+                    <p>CapCut (FREE, easy, powerful!), InShot, VN Editor, Kinemaster, iMovie (iOS). Add text overlays, music, transitions. Keep it simple and clean.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⏱️</span>Optimal Video Length</h3>
+                    <p>Reels/TikTok: 7-15 seconds (max 60). Facebook feed: 1-2 minutes. YouTube: 5-10 minutes. Stories: 15 seconds each. Shorter = better retention!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎤</span>Video Script Formula</h3>
+                    <p>First 3 seconds: HOOK (grab attention). Middle: VALUE (educate/entertain). Last 5 seconds: CTA (like, follow, shop). Write script before recording!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📺</span>Facebook Live Selling</h3>
+                    <p>Set schedule (e.g., every Friday 7PM), prepare products, good lighting, interact with viewers, announce prices clearly, pin payment details, follow up immediately.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Video SEO Tips</h3>
+                    <p>Use keywords in title, write detailed description, add relevant hashtags, create custom thumbnail, add captions/subtitles, tag products (Facebook/Instagram).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔊</span>Sound & Music</h3>
+                    <p>Use trending sounds on TikTok/Reels, royalty-free music (YouTube Audio Library, Epidemic Sound), clear voice audio, avoid copyright issues. 80% watch with sound on!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Video Performance</h3>
+                    <p>Track: Views, watch time (aim 50%+ retention), shares, comments, saves. Viral indicators: Quick spike in views, high share rate. Replicate what works!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Going Viral Tips:</strong>
+                    <p>Use trending sounds, hop on challenges early, relatable content, emotional hook, surprise element, perfect timing. Consistency matters more than virality!</p>
+                </div>
+            </div>
+            
+            <div id="startup" class="section">
+                <div class="card">
+                    <h3><span class="emoji">💡</span>Business Ideas 2024</h3>
+                    <p>Online selling (reselling, dropshipping), Food business (pastries, kakanin), Services (VA, tutoring, repairs), Laundry/car wash, Pet care, Events, Health/wellness.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Finding Your Niche</h3>
+                    <p>What you love + What you're good at + What people need = Your niche. Example: Love baking + Good at social media + People want custom cakes = Online cake business!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Market Validation</h3>
+                    <p>Before investing big: Survey 20-30 people, create sample products, test sell to friends/family, join relevant FB groups, check competition. Validate demand first!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💼</span>Zero Capital Business Ideas</h3>
+                    <p>Freelancing (writing, design), Affiliate marketing, Dropshipping, Virtual assistant, Online tutoring, Social media management, Consulting, Content creation.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📝</span>First 30 Days Roadmap</h3>
+                    <p>Week 1: Research & plan. Week 2: Setup social media, source products. Week 3: Create content, build audience. Week 4: Launch & first sales. Track everything!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏪</span>Where to Source Products</h3>
+                    <p>Divisoria, Baclaran, Greenhills (Manila), Taytay Tiangge (Rizal), China suppliers (Alibaba), Local manufacturers, Wholesale groups (FB), Direct importers.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Funding Options</h3>
+                    <p>Personal savings (safest), Family/friends, DTI NEGOSYO loans, Pag-IBIG MPL, Bank loans, SSS PESO loan, Crowdfunding, Angel investors (for scalable ideas).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚠️</span>Common Startup Mistakes</h3>
+                    <p>No market research, overspending, no pricing strategy, poor quality, no customer service, giving up too early, not tracking expenses, copying exactly.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎓</span>Skills to Learn</h3>
+                    <p>Basic accounting (track money), Social media marketing, Customer service, Photo/video editing, Basic design (Canva), Copywriting, Time management, Sales.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Mindset for Success</h3>
+                    <p>Be patient (success takes time), stay consistent (show up daily), keep learning (adapt & improve), handle rejection (not everyone will buy), celebrate small wins!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🚀 Ready to Start?</strong>
+                    <p>Action beats perfection! Start small, learn fast, adjust quickly. Your first customer is waiting. Take the leap today! You got this! 💪</p>
+                </div>
+            </div>
+            
+            <div id="trendy" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🔥</span>Hot Niches 2024</h3>
+                    <p>Wellness products, eco-friendly items, digital products, subscription boxes, pet products, work-from-home essentials, Korean/Japanese items, self-care, plant-based foods.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Platform Trends</h3>
+                    <p>TikTok Shop exploding! Instagram Reels dominance, Facebook Groups still strong, WhatsApp Business growing, Telegram channels emerging, YouTube Shorts rising.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤖</span>AI Tools for Marketing</h3>
+                    <p>ChatGPT (content writing), Canva AI (design), Copy.ai (ad copy), Jasper (blog posts), Midjourney (images), Descript (video editing). Most have free tiers!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🛍️</span>Shopping Behavior Changes</h3>
+                    <p>More research before buying, trust reviews heavily, prefer video content, mobile-first shopping, want fast shipping, compare prices easily, value authenticity.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Content Trends</h3>
+                    <p>Short-form video king, behind-the-scenes content, user-generated content, interactive polls/quizzes, educational content, memes, authentic/raw footage over polished.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💳</span>Payment Trends</h3>
+                    <p>E-wallets growing (GCash, Maya), BNPL services (Billease, Atome), QR payments, cryptocurrency acceptance (for tech products), contactless preferred.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌱</span>Sustainability Marketing</h3>
+                    <p>Eco-friendly packaging popular, minimal waste, reusable products, local sourcing, carbon-neutral shipping. Gen Z demands this! Promote your green initiatives.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Community Commerce</h3>
+                    <p>Private FB groups, Discord servers, Telegram channels. Build exclusive communities. Members feel special, share freely, higher loyalty, direct feedback loop.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎮</span>Gamification Boom</h3>
+                    <p>Spin wheels, scratch cards, daily check-ins, achievement badges, leaderboards, challenges, rewards. Make shopping fun and engaging!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⚡ Stay Updated:</strong>
+                    <p>Follow marketing blogs, join FB groups (Filipino Entrepreneurs), watch YouTube (Neil Patel, Gary Vee), listen to podcasts. Adapt or get left behind!</p>
+                </div>
+            </div>
+            
+            <div id="crisis" class="section">
+                <div class="card">
+                    <h3><span class="emoji">⚠️</span>Crisis Preparation</h3>
+                    <p>Have backup suppliers, emergency fund (3-6 months expenses), insurance, multiple delivery partners, backup payment methods, crisis communication plan.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">😤</span>Handling Angry Customers</h3>
+                    <p>Stay calm, listen fully, acknowledge feelings, apologize sincerely, offer solution immediately, follow up. Never argue publicly. Move to private messages quickly.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📉</span>Sales Slump Strategy</h3>
+                    <p>Analyze why (season? competition? quality?), run promotions, refresh content, reach out to old customers, try new platforms, add new products, check pricing.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚫</span>Negative Reviews Management</h3>
+                    <p>Respond within 24 hours, stay professional, acknowledge issue, offer to fix offline, show others you care. Never delete negative reviews (looks suspicious!).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔒</span>Account Hacked Response</h3>
+                    <p>Immediately: Change passwords, enable 2FA, report to platform, post on backup account, inform customers, secure payment info, check for fraud transactions.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤥</span>Dealing with Scammers</h3>
+                    <p>Red flags: Too good to be true, no reviews, pressure tactics, unclear refund policy. Trust your gut. Report to DTI, NBI Cybercrime, platform authorities.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Product Recall Process</h3>
+                    <p>Act fast! Announce publicly, offer full refund/replacement, identify affected batch, explain what happened, share corrective actions. Transparency builds trust.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💸</span>Cash Flow Problems</h3>
+                    <p>Solutions: Flash sale for quick cash, negotiate payment terms with suppliers, temporary loan, cut unnecessary expenses, focus on bestsellers only.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌊</span>Disaster Preparedness</h3>
+                    <p>Philippines = typhoons, floods, earthquakes. Backup inventory location, digital records (cloud storage), insurance, emergency protocols, alternative operations plan.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🛡️ Prevention is Key:</strong>
+                    <p>Regular backups, clear policies, good relationships, emergency fund, diverse income streams, insurance coverage. Hope for best, prepare for worst!</p>
+                </div>
+            </div>
+            
+            <div id="automation" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🤖</span>Why Automate</h3>
+                    <p>Save time, reduce errors, scale faster, 24/7 operations, consistent service, focus on growth activities. Automate repetitive tasks first!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Chatbot Setup</h3>
+                    <p>ManyChat (Facebook/Instagram), Chatfuel, Tidio. Auto-reply FAQs, collect leads, take orders, send updates. Free plans available. Set up in 1 hour!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📅</span>Content Scheduling</h3>
+                    <p>Buffer, Hootsuite, Later, Meta Business Suite (free!). Schedule posts 1 week ahead. Post consistently even when busy. Best ROI automation tool!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📧</span>Email Automation</h3>
+                    <p>Welcome series (3 emails), abandoned cart, post-purchase follow-up, birthday greetings, win-back campaigns. Set once, runs forever!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Payment & Invoicing</h3>
+                    <p>PayMongo, Xendit, PayPal (auto-send receipts), QuickBooks, Wave Accounting (free!). Automatic payment reminders, recurring billing, expense tracking.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Inventory Management</h3>
+                    <p>Stocky, Sortly, Excel with formulas. Auto-alert when stock low, track sales by product, calculate reorder points. Prevent overselling!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Analytics Automation</h3>
+                    <p>Google Data Studio (free visualizations), Facebook Pixel (track conversions), Google Analytics (auto-reports). Dashboard = see everything at a glance!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>CRM Tools</h3>
+                    <p>HubSpot (free tier), Zoho, Google Sheets (DIY). Track customer interactions, automate follow-ups, segment audiences, personalize communications.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔗</span>Zapier & Integration</h3>
+                    <p>Connect different apps without coding! Example: New order in Shopee → Add to Google Sheets → Send thank you email. Automate workflows!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⚡ Automation Priority:</strong>
+                    <p>Start with: Social media scheduling, chatbot for FAQs, email automation. Next level: Inventory tracking, payment processing, analytics. One at a time!</p>
+                </div>
+            </div>
+            
+            <div id="mindset" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🧠</span>Entrepreneur Mindset</h3>
+                    <p>Growth over fixed, solution-focused, embrace failure, continuous learning, long-term thinking, resilience, adaptability. Mindset = foundation of success!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💪</span>Overcoming Fear</h3>
+                    <p>Fear of failure? Start small, test first. Fear of judgment? Their opinion doesn't pay bills. Fear of competition? Blue ocean strategy - find unique angle.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⏰</span>Time Management</h3>
+                    <p>Prioritize: Urgent+Important (do now), Important not urgent (schedule), Urgent not important (delegate), Neither (eliminate). Use time blocking method.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Focus vs Multitasking</h3>
+                    <p>Deep work wins! 90-min focused blocks better than scattered 8 hours. Turn off notifications, batch similar tasks, use Pomodoro technique (25min work, 5min break).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📚</span>Never Stop Learning</h3>
+                    <p>Read daily (15 mins), watch educational videos, take online courses, join mastermind groups, attend webinars, learn from competitors, test new strategies.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">😫</span>Dealing with Burnout</h3>
+                    <p>Signs: No motivation, irritable, health issues. Solutions: Take breaks, delegate tasks, exercise, proper sleep, hobbies, disconnect from work, seek support.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🙏</span>Handling Rejection</h3>
+                    <p>"No" is data, not personal attack. Learn from it. 100 no's to get 1 yes? Normal! Don't take it personally. Every successful entrepreneur faced countless rejections.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎊</span>Celebrating Small Wins</h3>
+                    <p>First sale? Celebrate! 10 followers? Celebrate! Positive review? Celebrate! Acknowledge progress. Small wins = momentum. Motivates you to keep going!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Building Support System</h3>
+                    <p>Join entrepreneur communities, find mentor, accountability partner, supportive family/friends. Surround yourself with positive, growth-minded people.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌟</span>Vision Board & Goals</h3>
+                    <p>Create visual representation of goals. Where do you want to be in 1, 3, 5 years? Put it where you see daily. Visualize success, work towards it!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💎 Remember:</strong>
+                    <p>Success is not linear. Ups and downs are normal. Comparison is thief of joy. Your pace is perfect. Stay consistent. Trust the process. You're doing great! 🚀</p>
+                </div>
+            </div>
+            
+            <div id="legal" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📋</span>DTI Registration</h3>
+                    <p>Cost: ₱500 online, ₱515 in person. Process: Choose business name, check availability on DTI website, submit online/visit DTI office, receive certificate same day!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏛️</span>Business Permit Steps</h3>
+                    <p>1. Barangay clearance (₱100-500), 2. Mayor's permit (₱1k-5k depends on gross sales), 3. Fire safety inspection, 4. Health permit (if food/health products).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💼</span>BIR Registration</h3>
+                    <p>Get TIN (Tax Identification Number), Register business, Secure COR (Certificate of Registration), Get official receipts. Required if earning ₱250k+/year.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Tax Obligations</h3>
+                    <p>Income tax (quarterly/annual), Percentage tax (3% of gross sales), Withholding tax (if applicable). Keep all receipts! Consider hiring accountant/bookkeeper.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔖</span>Business Structure Options</h3>
+                    <p>Sole Proprietor (easiest, cheapest), Partnership (2+ owners), Corporation (for big business), Cooperative (group effort). Start with sole proprietor!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚖️</span>Consumer Protection Laws</h3>
+                    <p>Accurate product info, honor refund policy, no false advertising, proper labeling, warranty compliance. DTI protects consumers - be compliant!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📝</span>Contracts & Agreements</h3>
+                    <p>Supplier agreements, partnership contracts, employee contracts, non-disclosure agreements. Get everything in writing! Protect yourself legally.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">©️</span>Intellectual Property</h3>
+                    <p>Trademark your brand (₱500 filing), copyright original content, protect business name. IPO Philippines handles registration. Takes 6-12 months.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⚠️ Legal Reminder:</strong>
+                    <p>Operating without permits = fines or closure. Better to register properly from start. Consider it investment in legitimacy and long-term success!</p>
+                </div>
+            </div>
+            
+            <div id="finance" class="section">
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Separate Business & Personal</h3>
+                    <p>Critical! Open separate bank account, dedicated e-wallet, track all transactions. Makes accounting easier, looks professional, tax preparation simpler.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Basic Bookkeeping</h3>
+                    <p>Track: Income (all sales), Expenses (supplies, ads, shipping), Profit = Income - Expenses. Use Excel, Google Sheets, or apps (Wave, QuickBooks). Update daily!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💵</span>Cash Flow Management</h3>
+                    <p>Know when money comes in/out. Keep emergency fund (3 months expenses), don't spend all profits, reinvest wisely, maintain working capital.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Pricing for Profit</h3>
+                    <p>Don't just cover costs - build in profit! Formula: (Cost × 2) + Overhead + Desired Profit = Price. Factor in all expenses including your time!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Budget Allocation</h3>
+                    <p>Suggested: 50% inventory/supplies, 20% marketing, 10% operations, 10% reinvestment, 10% profit/savings. Adjust based on your business model.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💳</span>Credit & Loans</h3>
+                    <p>Build business credit, maintain good payment history. Options: Bank loans, SSS PESO loan, Pag-IBIG, microfinance. Borrow only if ROI is clear!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📉</span>Cost Cutting Strategies</h3>
+                    <p>Negotiate with suppliers, bulk buying, reduce waste, optimize shipping, automate tasks, energy-efficient operations, outsource vs hire full-time.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Reinvestment Strategy</h3>
+                    <p>When to reinvest: Hit consistent sales, have emergency fund, positive cash flow. Invest in: Better equipment, more inventory, marketing, training.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Financial Tools</h3>
+                    <p>Wave Accounting (free!), QuickBooks, Excel templates, GCash/Maya statements, receipt tracking apps (Expensify), budgeting apps (Money Lover).</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Financial Health Check:</strong>
+                    <p>Monthly: Review profit margins, check cash flow, analyze expenses. Quarterly: Compare to goals, adjust budget. Annually: Tax prep, full financial review.</p>
+                </div>
+            </div>
+            
+            <div id="scaling" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Signs You're Ready to Scale</h3>
+                    <p>Consistent sales 6+ months, positive reviews, manageable operations, healthy cash flow, repeat customers, identified growth opportunities. Don't rush!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👥</span>Hiring Your First Employee</h3>
+                    <p>Start with part-time VA (virtual assistant), or contractual help. Delegate repetitive tasks first: packing, customer service, content creation. Clear job description!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏪</span>Physical Store Considerations</h3>
+                    <p>Location (foot traffic, parking), Rent (affordable vs premium), Competition nearby, Target market access, Lease terms, Renovation costs. Calculate break-even point!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Inventory Scaling</h3>
+                    <p>Increase bestsellers only, negotiate bulk discounts, multiple suppliers (backup!), better storage system, inventory management software, forecast demand accurately.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌐</span>Multi-Channel Expansion</h3>
+                    <p>Start: Facebook/Instagram. Add: Shopee/Lazada. Then: TikTok Shop, own website. Finally: Physical presence. One platform at a time, master each first!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Market Expansion</h3>
+                    <p>Start local, then nearby cities, provincial expansion, eventually nationwide. Test each market small, scale what works. Adjust for regional preferences!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔧</span>Systems & Processes</h3>
+                    <p>Document everything: Order process, customer service scripts, packaging procedures, quality checks. Create SOPs (Standard Operating Procedures). Easier to train people!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Strategic Partnerships</h3>
+                    <p>Partner with: Complementary brands, suppliers, distributors, bigger retailers, influencers. Win-win arrangements. Expand reach without huge investment!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏢</span>Franchise Opportunity</h3>
+                    <p>If successful + replicable + profitable, consider franchising. Develop franchise package, legal documents, training program, support system. Massive growth potential!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>⚠️ Scaling Pitfalls:</strong>
+                    <p>Growing too fast (cash flow issues), poor hiring, losing quality control, neglecting core customers, overextending resources. Slow and steady wins!</p>
+                </div>
+            </div>
+            
+            <div id="seasonal" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🎄</span>Christmas Marketing (Sept-Dec)</h3>
+                    <p>Start early! Gift guides, bundles, gift wrapping service, "Pang-Noche Buena" promos, 13th month pay campaigns, Christmas-themed packaging, extended return policy.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎆</span>New Year Campaigns</h3>
+                    <p>Fresh start theme, "New Year, New You" positioning, resolution-related products, health/wellness focus, goal-setting tools, clearance sales (old inventory).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💝</span>Valentine's Day</h3>
+                    <p>Couple deals, gift sets, personalization options, same-day delivery, "Pang-date" products, singles awareness deals too! Market to both couples and self-love.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👩</span>Mother's Day / Father's Day</h3>
+                    <p>Family bundles, appreciation campaign, gift suggestions by budget, free gift wrapping, highlight products that make parents' lives easier, emotional storytelling.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏫</span>Back to School (June-July)</h3>
+                    <p>Student discounts, bulk orders for supplies, "Baon" meal ideas, study essentials, dorm products, parent-focused marketing. Target both students and parents!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">☀️</span>Summer Season (March-May)</h3>
+                    <p>Beach/travel products, summer fashion, cooling items, outdoor gear, vacation essentials, "Summer Sale" to clear inventory before rainy season.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Payday Promos (15th & 30th)</h3>
+                    <p>Flash sales on payday dates, limited quantity deals, "Sweldo Day Sale", payment deadline reminders, bundle offers, free shipping minimum purchase.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🛍️</span>Mega Sale Days</h3>
+                    <p>9.9, 10.10, 11.11, 12.12 - prepare 1 month ahead! Stock up, create exclusive bundles, run ads, participate in platform campaigns, extend customer service hours.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌧️</span>Rainy Season Marketing</h3>
+                    <p>Waterproof products, comfort foods, indoor activities, cozy items, "Rainy day essentials", monsoon-proof packaging, delivery considerations.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎂</span>Business Anniversary</h3>
+                    <p>Thank you sale, milestone celebration, customer appreciation, throwback content, special bundles, loyalty rewards, giveaways for supporters!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>📅 Seasonal Planning:</strong>
+                    <p>Create 12-month calendar with all seasons/holidays. Prep 2-3 months early for major holidays. Test small, scale successful campaigns. Track year-over-year performance!</p>
+                </div>
+            </div>
+            
+            <div id="niches" class="section">
+                <div class="card">
+                    <h3><span class="emoji">👗</span>Fashion & Apparel</h3>
+                    <p>Ukay finds, Korean fashion, plus size clothing, sustainable fashion, accessories, shoes. Low entry cost, high demand. Source: Divisoria, Taytay, Baclaran, China suppliers.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🍰</span>Food & Beverage</h3>
+                    <p>Home-baked goods, kakanin, meal preps, coffee, desserts, healthy snacks. Filipinos LOVE food! Get health permit. Start small, scale through word-of-mouth.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💄</span>Beauty & Wellness</h3>
+                    <p>Skincare, makeup, supplements, essential oils, organic products. Growing market! Partner with legit suppliers. Show before/after results. Get testimonials!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏠</span>Home & Living</h3>
+                    <p>Organization tools, decor, plants, kitchen gadgets, cleaning supplies. Work-from-home trend boost! Focus on aesthetic + functional products.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">👶</span>Mom & Baby Products</h3>
+                    <p>Baby clothes, feeding supplies, toys, maternity wear, diaper cakes. Loyal customer base! Join mommy groups. Build trust through quality and safety.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🐕</span>Pet Products</h3>
+                    <p>Pet food, accessories, grooming supplies, toys, pet clothing. Growing pet ownership! Pet parents spend generously. Specialize in dogs/cats first.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📚</span>Digital Products</h3>
+                    <p>E-books, templates, printables, courses, presets, stock photos. No inventory needed! Create once, sell forever. 100% profit margin!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💻</span>Tech & Gadgets</h3>
+                    <p>Phone accessories, earphones, cables, laptop stands, gaming gear. High demand, good margins. Test products yourself before selling!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Gift & Personalization</h3>
+                    <p>Customized items, gift baskets, corporate giveaways, occasion packages. Year-round demand! Peak during holidays. Build portfolio of designs.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌱</span>Eco-Friendly Products</h3>
+                    <p>Reusable items, sustainable fashion, zero-waste products, bamboo alternatives. Growing awareness! Target millennials and Gen Z. Premium positioning works!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🎯 Niche Selection Tips:</strong>
+                    <p>Choose passion + profit + market demand. Analyze competition (not too saturated, not too empty). Test with small inventory. Specialize = stand out!</p>
+                </div>
+            </div>
+            
+            <div id="packaging" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Packaging Importance</h3>
+                    <p>First physical touchpoint! Good packaging = professionalism, brand recall, free marketing (customers share!), protection, differentiation. Worth investing in!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎨</span>Packaging Elements</h3>
+                    <p>Outer box/mailer, product wrapper, thank you card, brand sticker, tissue paper, ribbon/twine, freebies, business card. Layer the experience!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💚</span>Budget Packaging Ideas</h3>
+                    <p>Kraft paper bags (₱3-5), corrugated boxes (₱10-20), custom stickers (₱1-2), printed tape (₱200/roll), stamped thank you cards. Start simple!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✨</span>Premium Packaging</h3>
+                    <p>Custom printed boxes, branded tissue, wax seals, satin ribbons, premium cards, reusable packaging. Charge premium prices = premium experience!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌿</span>Eco-Friendly Options</h3>
+                    <p>Recycled materials, biodegradable mailers, reusable bags, minimal packaging, plantable paper. Market as sustainable! Gen Z loves this!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📸</span>Instagram-Worthy Packaging</h3>
+                    <p>Colorful, aesthetic, unique opening experience, includes branded elements, photogenic layers, surprise elements. Customers will post = free advertising!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✍️</span>Personalization Touch</h3>
+                    <p>Handwritten notes, customer name on package, customized thank you message, special occasion greetings. Personal = memorable = loyalty!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔒</span>Protective Packaging</h3>
+                    <p>Bubble wrap, foam, air pillows, proper sizing, fragile stickers, waterproof bags (rainy season!). Prevent damage = prevent returns!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏷️</span>Labeling Requirements</h3>
+                    <p>Product name, ingredients (if food/cosmetics), expiry date, net weight, manufacturer info, warning labels. Compliance = trust + avoid penalties!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>📦 Packaging Sources:</strong>
+                    <p>Divisoria (cheapest), Online: Packline PH, Packaging Depot, Lazada/Shopee. Bulk orders = discounts. Design templates: Canva + local printers.</p>
+                </div>
+            </div>
+            
+            <div id="photography" class="section">
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Equipment Needed</h3>
+                    <p>Smartphone (latest cameras work great!), tripod (₱200-500), ring light or softbox (₱300-2000), white background (cloth/paper), reflector (DIY with foil!).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">☀️</span>Lighting Tips</h3>
+                    <p>Natural light = best and FREE! Shoot near windows, avoid direct sunlight (harsh shadows), golden hour (early morning/late afternoon), overcast days = soft lighting.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎨</span>Background Choices</h3>
+                    <p>White (clean, professional), Neutral (beige, gray), Textured (wood, marble), Colored (brand colors), Lifestyle (real environment). Match product vibe!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📐</span>Composition Rules</h3>
+                    <p>Rule of thirds, leading lines, negative space, fill the frame, multiple angles (front, side, top, detail shots), show scale (with hand/coin).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎭</span>Styling & Props</h3>
+                    <p>Complementary items (not competing), lifestyle context, minimal props (product is star), brand consistency, seasonal elements, tell a story with scene.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📸</span>Shot List Must-Haves</h3>
+                    <p>Hero shot (main), detail shots (texture, features), size reference, packaging shot, lifestyle shot (in use), flat lay, all angles, color variations.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✂️</span>Editing Basics</h3>
+                    <p>Adjust brightness/contrast, white balance, crop & straighten, remove background, enhance colors, sharpen, maintain consistency across all photos. Apps: Snapseed, Lightroom, VSCO.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Platform-Specific Sizes</h3>
+                    <p>Instagram feed: 1080×1080 (square), Stories: 1080×1920 (vertical), Facebook: 1200×630, Shopee/Lazada: 800×800 minimum, Pinterest: 1000×1500 (vertical).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💡</span>Common Photography Mistakes</h3>
+                    <p>Poor lighting, cluttered background, wrong angles, blurry images, inconsistent style, over-editing, no detail shots, doesn't show scale.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>📷 Pro Tip:</strong>
+                    <p>Batch photography! Set up once, shoot multiple products. Create photo library. Consistent schedule = always have content ready. Quality photos = higher perceived value!</p>
+                </div>
+            </div>
+            
+            <div id="copywriting" class="section">
+                <div class="card">
+                    <h3><span class="emoji">✍️</span>Copywriting Basics</h3>
+                    <p>Sell benefits not features. Feature = "waterproof", Benefit = "perfect for rainy season, worry-free". Focus on what customer gains!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>AIDA Formula</h3>
+                    <p>Attention (catchy hook), Interest (engaging details), Desire (show transformation), Action (clear CTA). Example: "Pawis problems? (A) Our cooling fabric (I) keeps you fresh all day (D). Shop now! (A)"</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔥</span>Power Words for Pinoys</h3>
+                    <p>Sulit, Mura, Limited, Proven, Fresh, Legit, Best-seller, Sale, Free, Guarantee, New, Exclusive, Premium, Fast, Easy, Tested. Use strategically!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📝</span>Product Description Template</h3>
+                    <p>Hook line → Key benefits (3-5 bullets) → Features/Specs → How to use → What's included → Guarantee/Warranty → Call-to-action. Clear and scannable!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💬</span>Social Media Captions</h3>
+                    <p>Start with question or bold statement, keep first line hooking (people see this first), use emojis (visual breaks), end with CTA, add relevant hashtags.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎪</span>Storytelling in Copy</h3>
+                    <p>Share customer success stories, your why/origin story, behind-the-scenes challenges, transformation journeys. Emotion sells! Facts tell, stories sell.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚡</span>Urgency & Scarcity</h3>
+                    <p>"Limited stocks!", "Sale ends tonight!", "Only 5 left!", "First 20 orders get...", "Today only!", "While supplies last!". Creates FOMO (fear of missing out).</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">✅</span>Social Proof Elements</h3>
+                    <p>"1000+ happy customers", "5-star rating", "As seen on...", "Best-seller", "Award-winning", Customer testimonials with photos. Builds trust instantly!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Call-to-Action Examples</h3>
+                    <p>"Shop now", "Order here", "Message us", "Limited slots", "Claim yours", "Get started", "Learn more", "Join now", "Reserve yours". Be specific and action-oriented!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚫</span>Copywriting Don'ts</h3>
+                    <p>Too salesy (pushy), all caps (shouting), too long (lose attention), jargon (confuse), false claims (lose trust), no spacing (hard to read), weak CTA.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Copy Testing:</strong>
+                    <p>A/B test different headlines, try Taglish vs pure English/Filipino, analyze which posts get most engagement, save winning formulas, swipe file successful competitors!</p>
+                </div>
+            </div>
+            
+            <div id="logistics" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🚚</span>Courier Comparison</h3>
+                    <p>J&T (cheap, nationwide), LBC (reliable, established), Ninja Van (fast Metro Manila), Lalamove (same-day), Grab Express (on-demand). Each has strengths!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📦</span>Shipping Best Practices</h3>
+                    <p>Pack securely, waterproof packaging, correct address format, include contact number, insurance for expensive items, track all shipments, confirm delivery.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💰</span>Shipping Cost Strategies</h3>
+                    <p>Free shipping on minimum (₱500+), Flat rate nationwide, Shoulder shipping (add to product price), Tiered pricing by location, Promo free shipping days.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⏰</span>Delivery Time Expectations</h3>
+                    <p>Metro Manila: 1-2 days, Luzon: 2-4 days, Visayas/Mindanao: 3-7 days. Set realistic expectations! Under-promise, over-deliver. Communicate delays immediately.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📍</span>Meet-up Locations</h3>
+                    <p>Save shipping costs! Common spots: LRT/MRT stations, malls, Starbucks/coffee shops. Safety first - public places, daytime, bring companion if big transactions.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏪</span>Drop-off vs Pick-up</h3>
+                    <p>Drop-off: You bring to courier branch (cheaper). Pick-up: Courier gets from you (convenience fee). Batch shipments = better rates. Schedule regular pick-ups.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌧️</span>Rainy Season Considerations</h3>
+                    <p>Double-bag items, use waterproof packaging, avoid bubble mailers (absorb water), inform customers of delays, check tracking more frequently. Prepare for monsoon!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📋</span>Inventory Location Strategy</h3>
+                    <p>Store at home (start), Rent storage (scaling), Use fulfillment centers (big volume), Partner with suppliers (drop-shipping). Optimize for access and cost!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚫</span>Prohibited Items</h3>
+                    <p>Check courier restrictions! Usually banned: Liquids (over 100ml), aerosols, flammables, batteries (large), perishables, cash, illegal items. Verify first!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>📦 Logistics Tip:</strong>
+                    <p>Build relationships with couriers! Regular business = better service, possible discounts, priority handling. Treat delivery partners well - they represent your brand!</p>
+                </div>
+            </div>
+            
+            <div id="competition" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🔍</span>Competitor Research Methods</h3>
+                    <p>Follow their social media, join as customer, read reviews, analyze pricing, check their ads, study their content, mystery shopping, monitor their promos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>What to Analyze</h3>
+                    <p>Product range, pricing strategy, marketing messages, customer service quality, delivery speed, packaging, unique selling points, strengths and weaknesses.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💎</span>Finding Your Edge</h3>
+                    <p>What can you do BETTER? Faster delivery? Better quality? Lower price? More personalized? Unique products? Exceptional service? Focus on 1-2 differentiators!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Blue Ocean Strategy</h3>
+                    <p>Don't compete in red ocean (crowded market). Find blue ocean (untapped market). Example: Everyone sells general products? Specialize in specific niche!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Collaboration Over Competition</h3>
+                    <p>Partner with non-competing businesses in same industry. Cross-promote, bundle products, share resources, refer customers. Growing the pie benefits everyone!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Market Gap Analysis</h3>
+                    <p>What needs aren't being met? Common complaints about competitors? Underserved customer segments? Price gaps? Quality gaps? Fill those holes!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚀</span>Innovation vs Imitation</h3>
+                    <p>Learn from competitors but don't copy! Add your twist, improve on ideas, create unique combinations. Innovation = stand out. Imitation = blend in.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚠️</span>Avoiding Price Wars</h3>
+                    <p>Don't compete on price alone (race to bottom!). Compete on value, quality, service, experience, convenience. Price-sensitive customers aren't loyal customers.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎓</span>Learn from Leaders</h3>
+                    <p>Study successful businesses (even different industries). What makes them great? Customer experience? Branding? Innovation? Adapt principles to your business.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🔑 Competition Mindset:</strong>
+                    <p>Competition means healthy market! Focus on YOUR customers, YOUR excellence. Obsessing over competitors = distraction. Be aware, stay differentiated, keep improving!</p>
+                </div>
+            </div>
+            
+            <div id="partnerships" class="section">
+                <div class="card">
+                    <h3><span class="emoji">🤝</span>Types of Partnerships</h3>
+                    <p>Supplier partnerships, Co-marketing, Affiliate programs, Reseller agreements, Strategic alliances, Brand collaborations, Influencer partnerships, Community partnerships.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Finding the Right Partners</h3>
+                    <p>Aligned values, complementary (not competing), similar target audience, mutual benefits, good reputation, reliable, professional, growth-minded. Chemistry matters!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📝</span>Partnership Agreement Essentials</h3>
+                    <p>Clear objectives, roles and responsibilities, profit sharing, duration, exit clause, confidentiality, conflict resolution. Everything in writing! Protect both parties.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🏢</span>Corporate Partnerships</h3>
+                    <p>Supply to companies, corporate gifts, employee benefits, office pantry, bulk orders. Professional pitch, competitive pricing, reliable delivery, invoice ready.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎪</span>Event Collaborations</h3>
+                    <p>Co-host bazaars, workshops, product launches, pop-up stores. Share costs, combine audiences, cross-promote. More impact, less individual expense!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎁</span>Product Bundling</h3>
+                    <p>Partner with complementary brands for bundles. Coffee + pastries, skincare set from different brands, gift baskets. Add value, increase average order value!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🌐</span>Online Partnerships</h3>
+                    <p>Guest blogging, social media takeovers, joint webinars, shared content, link exchanges, newsletter features. Expand reach digitally!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">💼</span>Franchise Partnerships</h3>
+                    <p>If proven model, offer franchising. Franchisee pays fee, you provide system, training, support. Win-win: you expand, they get proven business!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>Measuring Partnership Success</h3>
+                    <p>Track referrals, sales from partnership, new customers acquired, brand exposure, social media growth. Review quarterly, optimize or terminate non-performing partnerships.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>🤝 Partnership Golden Rule:</strong>
+                    <p>Win-win or no deal! Both parties must benefit. Clear communication, deliver on promises, nurture relationships. Great partnerships = business multiplier!</p>
+                </div>
+            </div>
+            
+            <div id="productivity" class="section">
+                <div class="card">
+                    <h3><span class="emoji">⏰</span>Time Blocking Method</h3>
+                    <p>Divide day into blocks: 8-10AM (orders/customer service), 10-12PM (content creation), 1-3PM (marketing), 3-5PM (admin). Protect blocks, minimize distractions!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🍅</span>Pomodoro Technique</h3>
+                    <p>Work 25 minutes focused → 5 minute break → Repeat 4 times → 30 minute break. Maintains energy, prevents burnout, increases focus. Use timer apps!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📋</span>Daily Task Prioritization</h3>
+                    <p>MIT (Most Important Tasks) - do 3 crucial tasks before anything else. Eat the frog first (hardest task early). Everything else is bonus!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🚫</span>Eliminating Distractions</h3>
+                    <p>Turn off notifications, dedicated workspace, noise-canceling headphones, website blockers (Freedom, Cold Turkey), communicate boundaries to family, schedule social media time.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🔄</span>Batch Similar Tasks</h3>
+                    <p>Reply all messages once, pack all orders together, create week's content in one session, schedule posts at once. Context switching wastes time!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🤖</span>Delegate & Automate</h3>
+                    <p>What only YOU can do vs what others/tech can do? Hire VA for repetitive tasks, automate posting, use templates, create systems. Focus on high-value activities!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📱</span>Productivity Apps</h3>
+                    <p>Todoist (task management), Notion (all-in-one), Trello (visual boards), Google Calendar (scheduling), RescueTime (time tracking), Forest (focus timer). Test to find fit!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">⚡</span>Energy Management</h3>
+                    <p>Know your peak hours (morning person? night owl?), do creative work during peak, admin during low energy, exercise regularly, sleep 7-8 hours, eat healthy!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Weekly Review Habit</h3>
+                    <p>Every Sunday: Review past week, celebrate wins, learn from failures, plan next week, adjust priorities. 30 minutes that multiplies productivity!</p>
+                </div>
+                
+                <div class="card">
+                    <h3><span class="emoji">🎯</span>80/20 Rule (Pareto Principle)</h3>
+                    <p>80% results come from 20% efforts. Identify what activities drive most sales, focus there! What customers bring most profit? What products sell best? Double down!</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💡 Productivity Mindset:</strong>
+                    <p>Work smarter, not harder. Busy ≠ productive. Focus on outcomes, not just activity. Rest is productive too! Sustainable pace beats burnout sprint!</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            © 2024 Pinoy Marketing Guide | Made with ❤️ for Filipino Entrepreneurs
+        </footer>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const tabs = document.querySelectorAll('.tab');
+            
+            sections.forEach(s => s.classList.remove('active'));
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
